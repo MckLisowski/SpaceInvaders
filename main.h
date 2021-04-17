@@ -18,15 +18,12 @@
 #include "Rocket.h"
 #include "Bullet.h"
 
-
 extern struct JoY JoYAct;
 extern int gRawKeys[6];
-
 
 void SystemInit();
 void SystemExit();
 void PrintDiagnosticInfo();
-
 
 int mode = 0;
 int stage = 0;
@@ -35,7 +32,6 @@ volatile long globalTimer_ms=0;
 long startTime_ms;
 int frame_count = 0;
 pthread_t tID;
-
 
 char *fbname;
 int FrameBufferFD, inputEventsFD;
