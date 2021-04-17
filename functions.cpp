@@ -116,17 +116,17 @@ short viewEditedValue(short modifiedValue, std::string modifiedString, short max
 	printText(nowyNapis, 210, 220);
 	ClearScreen();
 
-	while(cyfra>=0 and i<1000)											//jak cyfra<0 tzn ¿e koniec zmiany wartosci, jak i>1000 tzn ¿e wartosc wiêksza ni¿ 999
+	while(cyfra>=0 and i<1000)											//jak cyfra<0 tzn Â¿e koniec zmiany wartosci, jak i>1000 tzn Â¿e wartosc wiÃªksza niÂ¿ 999
 	{
 		cyfra=getNumber();												// wczytanie cyfry z klawiatury. jak nie cyfra to zwraca -1
 
-		if(cyfra<0)break;												// jak zwróci -1 to wychodzi z pêtli
+		if(cyfra<0)break;												// jak zwrÃ³ci -1 to wychodzi z pÃªtli
 		else															// jak cyfra to cyfra
 		{
 			// sekcja cyfry
-			nowaLiczba*=i;										// mnozenie liczby przez mno¿nik(1, 10, 100 itd) przed dodaniem nowej cyfry na msc jednosci
-			nowaLiczba+=cyfra;									// dodanie nowej cyfry na miejsce jednoœci
-			i*=10;												// zwiêkszenie mnoznika 10razy
+			nowaLiczba*=i;										// mnozenie liczby przez mnoÂ¿nik(1, 10, 100 itd) przed dodaniem nowej cyfry na msc jednosci
+			nowaLiczba+=cyfra;									// dodanie nowej cyfry na miejsce jednoÅ“ci
+			i*=10;												// zwiÃªkszenie mnoznika 10razy
 			// sekcja znaku
 			znak=cyfra+48;										// ustawienie chara na wartosc cyfry
 			nowyNapis.push_back(znak);							// dodanie znaku na koniec napisu
@@ -149,7 +149,7 @@ short viewEditedValue(short modifiedValue, std::string modifiedString, short max
 		nowaLiczba=modifiedValue;
 		nowyNapis=modifiedString+std::to_string(modifiedValue);
 	}
-	return nowaLiczba;											//zwraca now¹ wartosc lub star¹ je¿eli nic nie zmienilismy
+	return nowaLiczba;											//zwraca nowÂ¹ wartosc lub starÂ¹ jeÂ¿eli nic nie zmienilismy
 }
 
 short getNumber()
@@ -179,12 +179,12 @@ short toNumber(short key)
 		else
 			return key-71;
 	}
-	else if(key>=KEY_1 and key<=KEY_0)        	  // klawiatura g³ówna cyfry
+	else if(key>=KEY_1 and key<=KEY_0)        	  // klawiatura gÂ³Ã³wna cyfry
 	{
 		if(key==11) return 0;
 		return key-1;
 	}
-	return -1;      //jak klikniemy nie cyfrê
+	return -1;      //jak klikniemy nie cyfrÃª
 }
 
 //Zastosowanie ustawien================================================================================================================================================================
@@ -211,7 +211,7 @@ void utrudnij(GamePtr game)
 		game->getSettings()->setIterations(iter-1);
 }
 
-//Pozosta³e=====================================================================================================================
+//PozostaÂ³e=====================================================================================================================
 void moveTank(TankPtr tank)
 {
 	short motion=(short)tank->getSpeed();
@@ -296,7 +296,7 @@ bool checkPositions(int newposition, std::vector<int> positions,  int nrofelemen
 				}
 		}*/
 
-void values(GamePtr game)                                                       // funkcja ³¹cz¹ca wartosci z game z nazwami
+void values(GamePtr game)                                                       // funkcja Â³Â¹czÂ¹ca wartosci z game z nazwami
 {
 	nastawy[0] = "SZYBKOSC POCISKOW:   "+std::to_string(game->getSettings()->getBulletSpeed());
 	nastawy[1] = "ZYCIE RAKIET:        "+std::to_string(game->getSettings()->getRocketLife());
@@ -460,9 +460,9 @@ void printText(std::string napis, int x, int y, long textclr, long bckgrd )
 	 	 for(int i=0; i<(int)napis.length(); i++)
 	 	 {
 	 		 kod=(int)napis[i];
-	 		 if(kod<52)                       // 52 to kod ASCII pierwszej litery z 2 wiersza, wiêc to jest if obejmuj¹cy tylko 1 wwiersz
+	 		 if(kod<52)                       // 52 to kod ASCII pierwszej litery z 2 wiersza, wiÃªc to jest if obejmujÂ¹cy tylko 1 wwiersz
 	 		 {
-	 			 fy0=0; fx0=0+((kod-32)*25);  // w pionie jesteœmy na 0, bo 1 wiersz, a w poziomie ruszamy siê od 0 co 25, bo tyle jest miêdzy kolejnymi literami
+	 			 fy0=0; fx0=0+((kod-32)*25);  // w pionie jesteÅ“my na 0, bo 1 wiersz, a w poziomie ruszamy siÃª od 0 co 25, bo tyle jest miÃªdzy kolejnymi literami
 	 		 }
 	 		 else if(kod<72)
 	 		 {
@@ -473,7 +473,7 @@ void printText(std::string napis, int x, int y, long textclr, long bckgrd )
 	 			 fy0=50; fx0=0+((kod-72)*25);
 	 		 }
 	 		 drawLetter(fx0, fy0, x, y, textclr, bckgrd);      // funkcja wypisujaca po jednej literze. fx0-poziom w pliku czcionki, fy0-pion w pliku czcionki, x- x na wyswietlaczu, y
-	 		 x+=10;                           // odleg³oœc liter od siebie
+	 		 x+=10;                           // odlegÂ³oÅ“c liter od siebie
 	 	 }
 }
 
@@ -500,7 +500,7 @@ void drawObject(short positionX, short positionY, const short owidth, const shor
 {
 	for (int b = positionY; b <positionY+olength  ; b++) // pozycja Y w pionie - wiersze
 	{
-		for (int a = positionX; a < positionX+owidth; a++) //pozycja X w poziomie - od której do której kolumny
+		for (int a = positionX; a < positionX+owidth; a++) //pozycja X w poziomie - od ktÃ³rej do ktÃ³rej kolumny
 		{
 			SetPixel(GRAPH, a, b, color);
 		}
@@ -526,145 +526,3 @@ void draw1bitBitmap(const unsigned char* bitmap, int posX, int posY, int length,
 			if( bitmap[ dy*length/8 + dx/8 ] & (1 << (7 - dx%8)) )
 				GRAPH[ (posY+dy)*640 + posX + dx ] |= colour;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- *
- * //printText("A", 160, 140, 0xFFAA00);
-	//printText(nastawy[0], 210, 140);
-//printText("D", 160, 220, 0xFFAA00);
-	//printText(nastawy[2], 210, 220);
-	//printText("F", 160, 260, 0xFFAA00);
-	//printText(nastawy[3], 210, 260);
- * if(key== KEY_A)
-		{
-			modifiedString="POZIOM TRUDNOSCI:   ";
-			modifiedValue=game->getSettings()->getPoziomTrudnosci();
-			max=10;
-			nowaWart=viewEditedValue(modifiedValue, modifiedString, max);
-			game->getSettings()->setPoziomTrudnosci(nowaWart);
-			if(modifiedValue!=nowaWart)
-				zmienPoziom(game);
-		}
- *
- * else if(key== KEY_F)
-		{
-			modifiedString="SZYBKOSC RAKIET:   ";
-			modifiedValue=game->getSettings()->getRocketSpeed();
-			max=5;
-			nowaWart=viewEditedValue(modifiedValue, modifiedString, max);
-			game->getSettings()->setRocketSpeed(nowaWart);
-		}
-			else if(key== KEY_D)
-		{
-			modifiedString="ZYCIE CZOLGU:      ";
-			modifiedValue=game->getSettings()->getTankLife();
-			max=12;
-			nowaWart=viewEditedValue(modifiedValue, modifiedString, max);
-			game->getSettings()->setTankLife(nowaWart);
-		}
-	short szer= tank->getWidth();
-	short dlug= tank->getLength();
-	float oneThird = posX+((float)szer/3);
-	float twoThird = posX+((2*(float)szer)/3);
-	float half = posY+((float)dlug/2);
-
-	for(int i=posY; i<posY+dlug; i++)
-	{
-		for(int j=posX; j<posX+szer; j++)
-		{
-			if((j>=oneThird && j<=twoThird && i<=half) || (i>half))
-			{
-				SetPixel(GRAPH, j, i, color);
-			}
-		}
-	}
-  short moveTank(short actualXPos, short actualYPos, short move, TankPtr  tank)
-{
-	short motion=tank->getSpeed();
-	if(move==1 && actualXPos>motion)
-	{
-		return actualXPos-motion;
-	}
-	else if(move==2 && actualXPos<(640-(tank->getWidth()+motion)))
-	{
-		return actualXPos+motion;
-	}
-		if(move==3 && actualPos>motion)
-		{
-			return actualPos-motion;
-		}
-		else if(move==4 && actualPos<(actualPos+tank->getWidth()+motion))
-		{
-			return actualPos+motion;
-		}
-	else
-		return actualXPos;
-}
- * void viewMenuResumeGame()
-{
-	ClearScreen();
-		printText("SPACE INVADERS", 220, 60);
-
-		printText("WZNOW         Q", 150, 150);
-		printText("USTAWIENIA    W", 150, 200);
-		printText("NOWA GRA      E", 150, 250);
-		ClearScreen();
-}
-if((key!=74 and key!=78 and key>=71 and key<=82) or (key>=2 and key<=11)){
-
-
-
-short decision(short key)
-{
-	short move=5;
-		if(key>=103 and key<=108)
-		{
-				if(key==105) move=1;
-				else if (key==106) move=2;
-				else if (key==103) move=3;
-				else if (key==108) move=4;
-				else move=5;
-		}
-	return move;
-}
-*/
