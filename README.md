@@ -8,7 +8,8 @@ It's not perfect in any way. It has a lot of "if-else" based constructions, many
 Nevertheless, the game runs fluently and there are no bugs.
 
 Short description of game:
-You control the tank. You can move left-right and shoot at the rockets which are coming from the top edge of the screen. Both rockets and tank have several lives. When rocket is hit it changes color so that player knows how demaged it is. Remaining lives of the tank are shown on the right side of the screen together with points, current level and difficulty level. Almost every setting of the game can be customized by the player. If difficulty level is changed, all settings adjust automaticly. Moreover, player can modify every single setting separately (max tank speed, bullet speed, rocket life, new rockets frequency). Tank moves with inertia(speed). Rockets move with various speed, bullets are shoot with disepersion.
+
+You control the tank. You can move left-right and shoot at the rockets which are coming from the top edge of the screen. Both rockets and tank have several lives. When rocket is hit it changes color so that player knows how damaged it is. Remaining lives of the tank are shown on the right side of the screen together with points, current level and difficulty level. Almost every setting of the game can be customized by the player. If difficulty level is changed, all settings adjust automatically. Moreover, player can modify every single setting separately (max tank speed, bullet speed, rocket life, new rockets frequency). Tank moves with inertia(speed). Rockets move with various speed, bullets are shot with dispersion. 
 
 Here are some screenshots from the game:
 
