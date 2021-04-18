@@ -1,5 +1,5 @@
-# SpaceInvaders (worst project in my repository)
-C++ based game on Raspberry Pi 
+# Space Invaders 
+C++ based game on Raspberry Pi (worst project in my repository)
 This game is a small C++ project made on university. The part of the code responsible for comunication with Raspberry Pi is not included. These are just some files I've created. 
 
 It's not perfect in any way. It has a lot of "if-else" based constructions, many functions that could be simplified and optimized and other mistakes. I AM AWARE OF THEM, and most of them exist due to the constraints put on me by the academic teacher.  What I trained doing this project is mostly object-oriented programming and smart pointers usage. I also minded the hybridization aspect. 
@@ -12,9 +12,12 @@ Here are some screenshots from the game:
 
 Main menu:
 ![obraz](https://user-images.githubusercontent.com/37239354/115139638-436e2400-a033-11eb-97e6-818d2ae8e0fd.png)
+
 Game menu:
 ![obraz](https://user-images.githubusercontent.com/37239354/115139658-639de300-a033-11eb-8b3c-37e07bff3d28.png)
+
 Settings:
 ![obraz](https://user-images.githubusercontent.com/37239354/115139678-85976580-a033-11eb-953f-9017135fe5af.png)
+
 Gameplay:
 ![obraz](https://user-images.githubusercontent.com/37239354/115139707-ad86c900-a033-11eb-9400-6552faace5fe.png)
